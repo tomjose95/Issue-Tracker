@@ -1,0 +1,91 @@
+$create-new-btn-bg: #21ba64;
+$create-new-btn-hover-bg: #157d42;
+$create-new-btn-text: #ffffff;
+$sidebar-value: #8d9b9e;
+.home {
+  &_sidebar {
+    &_user {
+      display: flex;
+      align-items: center;
+    }
+    &_main {
+      margin: 0 3rem 1rem 0;
+    }
+    &_createbtn,
+    &_issuebtn {
+      margin-top: 1rem;
+      width: 100%;
+      background-color: $create-new-btn-bg;
+      color: $create-new-btn-text;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+    &_createbtn:hover,
+    &_issuebtn:hover {
+      background-color: $create-new-btn-hover-bg;
+    }
+    &_stats {
+      display: flex;
+      flex-direction: column;
+    }
+    &_items {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    &_value {
+      color: $sidebar-value;
+    }
+    &_title {
+      font-size: 1.4rem;
+      padding: 1rem 0;
+    }
+  }
+}
+.fa-plus {
+  padding-left: 0.4rem;
+}
+.fa-calendar-days {
+  padding-right: 0.56rem;
+}
+.hr {
+  height: 0.1rem;
+  border-width: 0;
+  background-color: #8d9b9e;
+  margin: 1rem 0;
+  opacity: 0.2;
+}
+
+.user {
+  &_image {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0.2rem;
+    border-radius: 100%;
+  }
+  &_count {
+    color: $sidebar-value;
+    padding: 0 0.2rem;
+  }
+  &_signup {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: $create-new-btn-text;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+@media screen and(max-width: 1093px) {
+  .home {
+    &_sidebar {
+      &_main {
+        margin: 0 0rem 1rem 0;
+      }
+    }
+  }
+}

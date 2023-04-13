@@ -1,0 +1,46 @@
+$profile-role-text: #8d9b9e;
+$update-bg: #3194f0;
+$update-text: #ffffff;
+.profile {
+  &_card {
+    width: 100%;
+    &_tab {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &_username {
+      padding: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    &_role {
+      padding: 0.5rem 0;
+      color: $profile-role-text;
+    }
+    &_email {
+      padding: 0.5rem 0;
+      color: $profile-role-text;
+    }
+    &_image {
+      width: 10rem;
+      border-radius: 100%;
+    }
+    &_update {
+      display: flex;
+      flex-direction: column;
+    }
+    &_input {
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    &_btn {
+      cursor: pointer;
+      border: none;
+      padding: 1rem;
+      background-color: $update-bg;
+      color: $update-text;
+    }
+  }
+}

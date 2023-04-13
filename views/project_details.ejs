@@ -1,0 +1,47 @@
+<div class="home">
+    <div class="home_sidebar">
+        <%- include("_project_sidebar"); %>
+    </div>
+    <div class="home_session">
+        <div class="home_session_title">Projects<span class="home_session_count">
+                <%=issueCount %>Issues
+            </span></div>
+        <div class="home_session_list">
+            <div class="home_session_header">
+                <div class="home_session_user">User</div>
+                <div class="home_session_project">Issues</div>
+                <div class="home_session_label">Label</div>
+                <div class="home_session_date">Date</div>
+            </div>
+            <% for (issue of project.issues){%>
+                <div class="home_session_projects" data-id="<%=issue.id  %>">
+                    <a href="/profile/<%= issue.user.id %>">
+                        <div class="home_user">
+                            <img src="<%=issue.user.avatar  %>" alt="user-image" class="home_user_image">
+                            <div class="home_user_name">
+                                <%= issue.user.username %>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="home_project">
+                        <div class="home_project_tite">
+                            <%= issue.title %>
+                        </div>
+                        <div class="home_project_desc">
+                            <%= issue.description %>
+                        </div>
+                    </div>
+                    <div class="home_label">
+                        <div class="home_label_category" id="<%= issue.label %>">
+                            <%= issue.label %>
+                        </div>
+                    </div>
+                    <div class="home_createdate">
+                        <%=formatedDate=issue.createdAt.toLocaleString("en-GB", { day: "numeric" , month: "short" ,
+                            year: "numeric" , }); %>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</div>

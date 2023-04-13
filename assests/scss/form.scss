@@ -1,0 +1,55 @@
+$required-text: red;
+$form-bg: #ffffff;
+$form-btn-bg: #3194f0;
+$form-btn-text: #ffffff;
+$form-title-bg: #3194f0;
+$home-bg: #f6efe6;
+.form {
+  background-color: $form-bg;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  &_session {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: $home-bg;
+  }
+  &_main {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    width: 30%;
+  }
+  &_required {
+    color: $required-text;
+  }
+  &_input {
+    height: 2.4rem;
+    width: 30rem;
+    padding: 1rem;
+  }
+  &_label {
+    padding-top: 1rem;
+  }
+  &_btn {
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: $form-btn-bg;
+    color: $form-bg;
+    padding: 1rem;
+    border: none;
+  }
+  &_title {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $form-title-bg;
+    color: $form-btn-text;
+    font-size: 2rem;
+  }
+}

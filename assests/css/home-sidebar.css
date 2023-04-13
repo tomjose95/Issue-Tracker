@@ -1,0 +1,72 @@
+.home_sidebar_user {
+  display: flex;
+  align-items: center; }
+
+.home_sidebar_main {
+  margin: 0 3rem 1rem 0; }
+
+.home_sidebar_createbtn, .home_sidebar_issuebtn {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #21ba64;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  cursor: pointer; }
+
+.home_sidebar_createbtn:hover, .home_sidebar_issuebtn:hover {
+  background-color: #157d42; }
+
+.home_sidebar_stats {
+  display: flex;
+  flex-direction: column; }
+
+.home_sidebar_items {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0; }
+
+.home_sidebar_value {
+  color: #8d9b9e; }
+
+.home_sidebar_title {
+  font-size: 1.4rem;
+  padding: 1rem 0; }
+
+.fa-plus {
+  padding-left: 0.4rem; }
+
+.fa-calendar-days {
+  padding-right: 0.56rem; }
+
+.hr {
+  height: 0.1rem;
+  border-width: 0;
+  background-color: #8d9b9e;
+  margin: 1rem 0;
+  opacity: 0.2; }
+
+.user_image {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 0.2rem;
+  border-radius: 100%; }
+
+.user_count {
+  color: #8d9b9e;
+  padding: 0 0.2rem; }
+
+.user_signup {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+@media screen and (max-width: 1093px) {
+  .home_sidebar_main {
+    margin: 0 0rem 1rem 0; } }

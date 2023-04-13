@@ -1,0 +1,32 @@
+.profile_card {
+  width: 100%; }
+  .profile_card_tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .profile_card_username {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 700; }
+  .profile_card_role {
+    padding: 0.5rem 0;
+    color: #8d9b9e; }
+  .profile_card_email {
+    padding: 0.5rem 0;
+    color: #8d9b9e; }
+  .profile_card_image {
+    width: 10rem;
+    border-radius: 100%; }
+  .profile_card_update {
+    display: flex;
+    flex-direction: column; }
+  .profile_card_input {
+    padding: 1rem;
+    margin: 1rem 0; }
+  .profile_card_btn {
+    cursor: pointer;
+    border: none;
+    padding: 1rem;
+    background-color: #3194f0;
+    color: #ffffff; }

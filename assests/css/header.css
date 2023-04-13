@@ -1,0 +1,101 @@
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: alpha(opacity=50);
+  justify-content: center;
+  align-items: center; }
+  .overlay_card {
+    z-index: 100; }
+  .overlay_signin {
+    width: 100%;
+    display: none;
+    position: relative;
+    z-index: 10; }
+  .overlay_signup, .overlay_project, .overlay_issue {
+    width: 100%;
+    display: none;
+    position: relative;
+    z-index: 10; }
+
+.display {
+  display: flex; }
+
+header {
+  width: 100%;
+  padding: 1.2rem;
+  color: #363939;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; }
+
+.navbar {
+  display: flex; }
+  .navbar_links {
+    margin: 0 1rem;
+    cursor: pointer; }
+  .navbar_links:hover {
+    color: #2a3839;
+    margin: 0 1rem;
+    cursor: pointer; }
+
+.user_session {
+  display: flex; }
+  .user_session_links {
+    background-color: #3194f0;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.8rem;
+    margin: 0 0.8rem;
+    cursor: pointer; }
+  .user_session_image {
+    width: 3rem;
+    border-radius: 100%;
+    margin-right: 0.8rem;
+    cursor: pointer; }
+  .user_session_details {
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+  .user_session_profile {
+    align-self: flex-start;
+    margin: 0 0.8rem 0 1.2rem;
+    padding-top: 0.2rem;
+    cursor: pointer; }
+  .user_session_data-role {
+    color: #93a5a7; }
+
+.user_dropdown {
+  display: none;
+  position: absolute;
+  top: 5.2rem;
+  width: 14rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; }
+  .user_dropdown_list {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1.2rem; }
+
+@media screen and (max-width: 457px) {
+  .user_session_data {
+    display: none; }
+  .user_session_profile {
+    display: none; }
+  .user_dropdown {
+    position: absolute;
+    top: 5.2rem;
+    left: 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; }
+    .user_dropdown_list {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 1.2rem; } }

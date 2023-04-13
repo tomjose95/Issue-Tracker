@@ -1,0 +1,17 @@
+<% if(locals.users){ %>
+    <form action="/create-issue" method="post" class="form" id="issue">
+        <label class="form_label">Issue Title <span class="form_required">*</span></label>
+        <input type="text" name="title" class="form_input" placeholder="Issue Title" required>
+        <label class="form_label">Choose a label: <span class="form_required">*</span></label>
+        <select name="label" id="label" class="form_input">
+            <option value="bug">Bug</option>
+            <option value="help">Help</option>
+            <option value="invalid">Invalid</option>
+            <option value="doubt">Doubt</option>
+        </select>
+        <label class="form_label">Issue Description <span class="form_required">*</span></label>
+        <textarea name="description" class="form_input" cols="30" rows="10" style="  resize: none;height: 8rem;
+    " placeholder=" Issue Description" required></textarea>
+        <button class="form_btn" type="submit">Add Issue</button>
+    </form>
+    <% } %>

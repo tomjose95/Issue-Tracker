@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/header.css">
+<script src="/js/userLogin.js"></script>
+<div class="overlay">
+    <div class="overlay_card">
+
+        <div class="overlay_project">
+            <%- include("_create_project"); %>
+        </div>
+        <div class="overlay_issue">
+            <%- include("_create_issue"); %>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="navbar">
+        <a href="">
+            <div class="navbar_links">Home</div>
+        </a>
+        <a href="">
+            <div class="navbar_links">About Us</div>
+        </a>
+        <a href="">
+            <div class="navbar_links">Contact Us</div>
+        </a>
+        <a href="">
+            <div class="navbar_links">FAQs</div>
+        </a>
+    </div>
+    <div class="user_session">
+        <% if (locals.users) { console.log('user.username :>> ', locals.users); %>
+            <div class="user_session_details">
+                <img src="  <%=users.avatar%>" alt="profile-image" class="user_session_image">
+                <div class="user_session_data">
+                    <div class="user_session_data-name">
+                        <%=users.username%>
+                    </div>
+                    <div class="user_session_data-role">
+                        <%=users.role %>
+                    </div>
+                </div>
+                <div class="user_session_profile"><i class="fa-solid fa-caret-down" style="color: #768c90;"></i></div>
+                <div class="user_dropdown">
+                    <a href="">
+                        <div class="user_dropdown_list">Profile</div>
+                    </a>
+                    <a href="">
+                        <div class="user_dropdown_list">Logout</div>
+                    </a>
+                </div>
+            </div>
+            <% }else{ %>
+                <a href="/sign-in"> <button class="user_session_links" id="login">Sign In</button></a>
+                <a href="/sign-up"> <button class="user_session_links" id="signup">Sign Up</button></a>
+                <% } %>
+    </div>
+</header>

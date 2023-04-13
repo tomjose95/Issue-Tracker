@@ -1,0 +1,24 @@
+<div class="form_session">
+    <div class="form_main">
+        <div class="form_title">Sign Up</div>
+        <link rel="stylesheet" href="/css/form.css">
+        <form action="/create" class="form" method="post">
+            <label class="form_label">E-mail <span class="form_required">*</span></label>
+            <input class="form_input" type="email" name="email" placeholder="E-mail" required>
+            <label class="form_label">Username <span class="form_required">*</span></label>
+            <input class="form_input" type="text" name="username" placeholder="Username" required>
+            <label class="form_label">Password <span class="form_required">*</span></label>
+            <input class="form_input" type="password" name="password" placeholder="Password" required>
+            <label class="form_label">Confirm Password <span class="form_required">*</span></label>
+            <input class="form_input" type="password" name="confirmPassword" placeholder="Confirm password" required>
+            <label class="form_label">Choose a role: <span class="form_required">*</span></label>
+            <input type="hidden" name="avatar" value="/images/default_image.png">
+            <select name="role" id="role" class="form_input">
+                <option value="beginner">Beginner</option>
+                <option value="expert">Expert</option>
+                <option value="intermediate">Intermediate</option>
+            </select>
+            <button class="form_btn" type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>

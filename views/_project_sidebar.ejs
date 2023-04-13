@@ -1,0 +1,48 @@
+<div class="home_sidebar_title">Project Stats</div>
+<div class="home_sidebar_user">
+    <% for(user of user){ %>
+        <img src="<%=user.avatar  %>" alt="user-image" class="user_image">
+        <% } %>
+            <div class="user_count">+<%=userCount%>
+            </div>
+            <% if (!locals.users){ %>
+                <a href="/sign-up">
+                    <div class="user_signup"><i class="fa-solid fa-plus fa-sm" style="color: #8d9b9e;"></i></div>
+                </a>
+
+                <% } %>
+</div>
+<div class="home_sidebar_main">
+    <% if (locals.users){ %>
+        <div class=" home_sidebar_issuebtn">New Issue <i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i>
+        </div>
+        <% } %>
+            <hr class="hr">
+            <div class="home_sidebar_stats">
+                <div class="home_sidebar_items">
+                    <div class="home_sidebar_data"><i class="fa-solid fa-calendar-days fa-xl"
+                            style="color:  #8d9b9e;"></i>
+                        Today</div>
+                    <div class="home_sidebar_value">
+                        <%= projectTodayCount[1].projectNumber %>
+                    </div>
+                </div>
+                <div class="home_sidebar_items">
+                    <div class="home_sidebar_data"><i class="fa-solid fa-calendar-days fa-xl"
+                            style="color:  #8d9b9e;"></i>
+                        This
+                        Month</div>
+                    <div class="home_sidebar_value">
+                        <%= projectMonthCount[0].projectNumber %>
+                    </div>
+                </div>
+                <div class="home_sidebar_items">
+                    <div class="home_sidebar_data"><i class="fa-solid fa-calendar-days fa-xl"
+                            style="color:  #8d9b9e;"></i>This
+                        Year</div>
+                    <div class="home_sidebar_value">
+                        <%= projectYearCount[0].projectNumber %>
+                    </div>
+                </div>
+            </div>
+</div>

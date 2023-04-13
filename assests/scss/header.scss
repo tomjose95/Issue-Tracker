@@ -1,0 +1,139 @@
+$header-text: #363939;
+$header-text-hover: #2a3839;
+$header-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$header-btn-bg: #3194f0;
+$header-btn-text: #ffffff;
+$header-role-text: #93a5a7;
+$overly-bg: #000;
+$dropdown-bg: #ffffff;
+$dropdown-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: alpha(opacity=50);
+
+  justify-content: center;
+  align-items: center;
+  &_card {
+    z-index: 100;
+  }
+  &_signin {
+    width: 100%;
+    display: none;
+    position: relative;
+    z-index: 10;
+  }
+  &_signup,
+  &_project,
+  &_issue {
+    width: 100%;
+    display: none;
+    position: relative;
+    z-index: 10;
+  }
+}
+.display {
+  display: flex;
+}
+header {
+  width: 100%;
+  padding: 1.2rem;
+  color: $header-text;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $header-shadow;
+}
+.navbar {
+  display: flex;
+  &_links {
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  &_links:hover {
+    color: $header-text-hover;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+}
+.user_session {
+  display: flex;
+  &_links {
+    background-color: $header-btn-bg;
+    color: $header-btn-text;
+    border: none;
+
+    border-radius: 0.4rem;
+    padding: 0.8rem;
+    margin: 0 0.8rem;
+    cursor: pointer;
+  }
+  &_image {
+    width: 3rem;
+    border-radius: 100%;
+    margin-right: 0.8rem;
+    cursor: pointer;
+  }
+  &_details {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &_profile {
+    align-self: flex-start;
+    margin: 0 0.8rem 0 1.2rem;
+    padding-top: 0.2rem;
+    cursor: pointer;
+  }
+  &_data {
+    &-role {
+      color: $header-role-text;
+    }
+  }
+}
+.user {
+  &_dropdown {
+    display: none;
+    position: absolute;
+    top: 5.2rem;
+    width: 14rem;
+    box-shadow: $dropdown-shadow;
+    &_list {
+      background-color: $dropdown-bg;
+      text-align: center;
+      padding: 1.2rem;
+    }
+  }
+}
+@media screen and(max-width: 457px) {
+  .user_session {
+    &_data {
+      display: none;
+    }
+    &_profile {
+      display: none;
+    }
+  }
+  .user {
+    &_dropdown {
+      position: absolute;
+      top: 5.2rem;
+      left: 0;
+      width: 100%;
+      box-shadow: $dropdown-shadow;
+      &_list {
+        background-color: $dropdown-bg;
+        text-align: center;
+        padding: 1.2rem;
+      }
+    }
+  }
+}

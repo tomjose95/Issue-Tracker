@@ -1,0 +1,35 @@
+<div class="home">
+    <div class="home_sidebar">
+        <%- include("_home_sidebar"); %>
+    </div>
+    <div class="home_session">
+        <div class="home_session_title">Profile</div>
+        <div class="profile_card">
+            <div class="profile_card_tab">
+                <img class="profile_card_image" src="<%= users.avatar%>" alt="<%= users.avatar %>">
+                <div class="profile_card_username">
+                    <%=users.username%>
+                </div>
+                <div class="profile_card_role">
+                    <%=users.role%>
+                </div>
+                <div class="profile_card_email">
+                    <%=users.email%>
+                </div>
+            </div>
+            <div class="profile_card_edit">
+                <form action="/update/<%=users.id  %>" method="post" enctype="multipart/form-data"
+                    class="profile_card_update">
+                    <label for="username">Username</label>
+                    <input class="profile_card_input" type="text" name="username" id="" value=<%=users.username%>>
+                    <label for="username">Email</label>
+                    <input class="profile_card_input" type="email" name="email" value=<%=users.email%>>
+                    <label for="username">Profile image </label>
+                    <input class="profile_card_input" type="file" name="avatar">
+                    <button class="profile_card_btn" type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

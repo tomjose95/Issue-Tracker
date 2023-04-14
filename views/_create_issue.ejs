@@ -1,5 +1,6 @@
 <% if(locals.users){ %>
     <form action="/create-issue" method="post" class="form" id="issue">
+        <i class="fa-solid fa-xmark fa-lg" style="color: #000000;"></i>
         <label class="form_label">Issue Title <span class="form_required">*</span></label>
         <input type="text" name="title" class="form_input" placeholder="Issue Title" required>
         <label class="form_label">Choose a label: <span class="form_required">*</span></label>
@@ -12,6 +13,7 @@
         <label class="form_label">Issue Description <span class="form_required">*</span></label>
         <textarea name="description" class="form_input" cols="30" rows="10" style="  resize: none;height: 8rem;
     " placeholder=" Issue Description" required></textarea>
+        <input type="hidden" name="project" value="<%= project._id ||"" %>">
         <button class="form_btn" type="submit">Add Issue</button>
     </form>
     <% } %>

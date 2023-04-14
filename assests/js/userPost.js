@@ -12,4 +12,8 @@ $(document).ready(function () {
     $(".overlay").addClass("display");
     $(".overlay_issue").addClass("display");
   });
+  $(".fa-xmark").click(function () {
+    console.log("object :>> ");
+    $(".overlay").removeClass("display");
+  });
 });

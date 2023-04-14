@@ -1,19 +1,6 @@
-<link rel="stylesheet" href="/css/header.css">
-<script src="/js/userLogin.js"></script>
-<div class="overlay">
-    <div class="overlay_card">
-
-        <div class="overlay_project">
-            <%- include("_create_project"); %>
-        </div>
-        <div class="overlay_issue">
-            <%- include("_create_issue"); %>
-        </div>
-    </div>
-</div>
 <header>
     <div class="navbar">
-        <a href="">
+        <a href="/">
             <div class="navbar_links">Home</div>
         </a>
         <a href="">
@@ -40,10 +27,10 @@
                 </div>
                 <div class="user_session_profile"><i class="fa-solid fa-caret-down" style="color: #768c90;"></i></div>
                 <div class="user_dropdown">
-                    <a href="">
+                    <a href="/profile/:<%=users.id  %>">
                         <div class="user_dropdown_list">Profile</div>
                     </a>
-                    <a href="">
+                    <a href="/sign-out">
                         <div class="user_dropdown_list">Logout</div>
                     </a>
                 </div>

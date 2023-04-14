@@ -19,7 +19,7 @@
     color: red; }
   .form_input {
     height: 2.4rem;
-    width: 30rem;
+    width: 100%;
     padding: 1rem; }
   .form_label {
     padding-top: 1rem; }

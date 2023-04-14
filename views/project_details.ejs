@@ -2,6 +2,15 @@
     <div class="home_sidebar">
         <%- include("_project_sidebar"); %>
     </div>
+    <div class="overlay">
+        <div class="overlay_card">
+
+            <div class="overlay_issue">
+                <%- include("_create_issue"); %>
+            </div>
+
+        </div>
+    </div>
     <div class="home_session">
         <div class="home_session_title">Projects<span class="home_session_count">
                 <%=issueCount %>Issues

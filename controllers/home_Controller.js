@@ -260,7 +260,7 @@ module.exports.createProject = async (req, res) => {
   } catch (err) {
     req.flash("error", err);
     console.log(err);
-    return res.redirect("back");
+    return res.redirect("/");
   }
 };
 

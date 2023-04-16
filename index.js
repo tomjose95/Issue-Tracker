@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const port = process.env.PORT || 8000;
+const port = 3000;
 const path = require("path");
 var expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose");
@@ -13,15 +13,7 @@ const flash = require("connect-flash");
 const customMware = require("./config/middleware");
 const MongoStore = require("connect-mongo")(session);
 const app = express();
-app.use(
-  sassMiddleware({
-    src: "./assests/scss",
-    dest: "./assests/css",
-    debug: true,
-    outputStyle: "extended",
-    prefix: "/css",
-  })
-);
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(expressLayouts);
